@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Pedidos</title>
+<!--    <link rel="stylesheet" th:text="@{style.css}">-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            margin: 0 auto;
+            background-color: #202020;
+            color: antiquewhite;
+            font-size: 2rem;
+            font-family: Poppins, sans-serif;
+        }
+        input{
+            padding: 10px;
+            border-radius: 20px;
+            background-color: #505050;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Pedidos</h1>
+    <h2>Olá, <span th:text="${nome}">visitante</span>! Seja bem-vindo ao nosso sistema! Abaixo estão os campos de preenchimento de dados sobre os pratos.</h2>
+    <form th:action="@{/cadastroPedido/salvar}" method="post">
+        <div>
+            <label for="">Nome do pedido: </label>
+            <input type="text" name="nomePedido" id=""></div>
+        <div>
+            <label for="">Categoria: </label>
+            <select name="categoria">
+                <option value="bebida">Bebida</option>
+                <option value="comida">Comida</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Preço: </label>
+            <input type="number" name="precoPedido" id="" step="0.01">
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
