@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+    <link rel="stylesheet" th:href="@{/css/signup.css}">
+</head>
+<body>
+<form th:action="@{/signup/salvar}" method="get">
+    <h1>Bem-vindo a tela de log in!</h1>
+    <h2>Insira suas credenciais para logar na sua conta.</h2>
+    <div class="blurBG"></div>
+    <div>
+        <label for="">E-mail: </label>
+        <input type="text" name="emailUsuario" id="">
+    </div>
+    <div>
+        <label for="">Senha: </label>
+        <input type="password" name="senhaUsuario" id="">
+    </div>
+    <div class="options">
+        <a href="" class="loginBT">Já tenho uma conta</a>
+        <button type="submit" class="signupBT">Cadastrar</button>
+    </div>
+</form>
+</body>
+</html>
