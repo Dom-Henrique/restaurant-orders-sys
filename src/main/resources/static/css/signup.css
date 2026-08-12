@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQypTkfbvS6xVC62yN_yCaLIK64v5giwR5d4sneqnudg3mQzpLYj657o5c&s=10");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100vh;
+    font-family: Poppins, sans-serif;
+}
+form{
+    width: fit-content;
+    border: bisque solid 1px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 20px black;
+}
+form>div>input{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: transparent;
+    margin: 10px;
+    transition: .2s;
+}
+form>div>input:focus{
+    outline: none;
+    background-color: bisque;
+    transition: .2s;
+}
+.signupBT, .loginBT{
+    border: none;
+    padding: 10px;
+    background-color: aqua;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: .4s;
+}
+.signupBT:hover, .loginBT:hover{
+    transform: scale(1.1);
+    transition: .4s;
+}
