@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" th:href="@{/css/signup.css}">
+</head>
+<body>
+    <form th:action="@{/signup/salvar}" method="post">
+        <h1>Bem-vindo a tela de cadastro!</h1>
+        <h2>Insira suas credenciais para criarmos uma nova conta.</h2>
+        <div class="blurBG"></div>
+        <div>
+            <label for="">Nome de usuário: </label>
+            <input type="text" name="nomeUsuario" id="">
+        </div>
+        <div>
+            <label for="">E-mail: </label>
+            <input type="text" name="emailUsuario" id="">
+        </div>
+        <div>
+            <label for="">Senha: </label>
+            <input type="password" name="senhaUsuario" id="">
+        </div>
+        <div class="options">
+            <a href="" class="loginBT">Já tenho uma conta</a>
+            <button type="submit" class="signupBT">Cadastrar</button>
+        </div>
+    </form>
+</body>
+</html>
