@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Pedido recebido</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
 <h1><span th:text="${nome}">Visitante</span>, o seu <span th:text="${nomePedido}">pedido</span> foi recebido com sucesso!</h1>
