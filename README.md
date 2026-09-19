@@ -1,9 +1,13 @@
-# RESTAURANT ORDERS SYSTEM
+# 🍽️ | RESTAURANT ORDERS SYSTEM
 This system was developed by Dom Henrique (Dom Henry, in English) for practice of Spring Boot. Thinking in how does works a restaurant, i thinked "Let's try simulate a real restaurant daily routine using Spring Framework!" and i become.
 
 ## Technologies
-All technologies used in this project:
-- **Spring Boot**: Developed in 2014 like a Spring Framework improvement, facilites the development of web system using objects (Beans) and pre-functions.
-- **Spring Database JPA**: A local database to integrate to system
+### Spring Boot
+<img src="https://spring.io/img/spring-2.svg" style="height: 50px">
+The best framework to develop web applications in Java, offers practicity and agility in creation and conection among classes (like Pedido and Usuario), in addition to implement configurations like JPA.
 
+### JPA Data Base
+<img src="https://spring.io/img/projects/spring-data.svg" style="width: 50px">
+
+As i don't have a great experience with databases like SQL or PostGrees, JPA it's a good alternative to storage the data of orders and users. In the future, i wish to implement SQL or PostGrees.
 #### Developed by Dom Henrique, 2026 Brazil.
