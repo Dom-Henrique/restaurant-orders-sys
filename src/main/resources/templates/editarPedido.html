@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Pedido</title>
+</head>
+<body>
+    <h1>Editar Pedido</h1>
+    <form th:action="@{/editarPedido/{id}/salvar(id=${pedido.id})}" method="post">
+        <div>
+            <label for="">Nome do pedido: </label>
+            <input type="text" name="nomePedido" id="" th:value="${pedido.nomePedido}"></div>
+        <div>
+            <label for="">Categoria: </label>
+            <select name="categoriaPedido">
+                <option value="bebida" th:selected="${pedido.categoriaPedido == 'bebida'}">Bebida</option>
+                <option value="comida" th:selected="${pedido.categoriaPedido == 'comida'}">Comida</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Preço: </label>
+            <input type="number" name="precoPedido" id="" step="0.01" th:value="${pedido.precoPedido}">
+        </div>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

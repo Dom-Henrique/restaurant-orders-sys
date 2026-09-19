@@ -6,8 +6,9 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<h1><span th:text="${nome}">Visitante</span>, o seu <span th:text="${nomePedido}">pedido</span> foi recebido com sucesso!</h1>
+<h1><span th:text="${nomePedido}">pedido</span> cadastrado com sucesso!</h1>
+<p>Nome do pedido: <span th:text="${nomePedido}">nome</span></p>
 <p>Preço total: <span th:text="${precoPedido}">preço</span></p>
-<p>Tipo: <span th:text="${categoria}">tipo</span></p>
+<p>Tipo: <span th:text="${categoriaPedido}">tipo</span></p>
 </body>
 </html>

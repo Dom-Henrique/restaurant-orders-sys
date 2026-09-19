@@ -7,23 +7,43 @@
 </head>
 <body>
     <h1>Cadastro de Pedidos</h1>
-    <h2>Olá, <span th:text="${nome}">visitante</span>! Seja bem-vindo ao nosso sistema! Abaixo estão os campos de preenchimento de dados sobre os pratos.</h2>
+<!--    <h2>Olá, <span th:text="${nome}">visitante</span>! Seja bem-vindo ao nosso sistema! Abaixo estão os campos de preenchimento de dados sobre os pratos.</h2>-->
     <form th:action="@{/cadastroPedido/salvar}" method="post">
         <div>
-            <label for="">Nome do pedido: </label>
-            <input type="text" name="nomePedido" id=""></div>
-        <div>
-            <label for="">Categoria: </label>
-            <select name="categoria">
-                <option value="bebida">Bebida</option>
-                <option value="comida">Comida</option>
-            </select>
+            <div>
+                <label for="">Nome do pedido: </label>
+                <input type="text" name="nomePedido" id=""></div>
+            <div>
+                <label for="">Categoria: </label>
+                <select name="categoriaPedido">
+                    <option value="bebida">Bebida</option>
+                    <option value="comida">Comida</option>
+                </select>
+            </div>
+            <div>
+                <label for="">Preço: </label>
+                <input type="number" name="precoPedido" id="" step="0.01">
+            </div>
         </div>
-        <div>
-            <label for="">Preço: </label>
-            <input type="number" name="precoPedido" id="" step="0.01">
-        </div>
-        <button type="submit">Cadastrar</button>
+        <button type="submit" class="cadastroBT">Cadastrar</button>
     </form>
+    <section class="pedidosFeitos">
+        <h2>Pedidos cadastrados</h2>
+        <ul>
+            <li th:each="pedido : ${pedidos}">
+                <div class="blurBG"></div>
+                <div class="orderData">
+                    <p>Pedido: <span th:text="${pedido.nomePedido}"></span></p>
+                    <p>Categoria: <span th:text="${pedido.categoriaPedido}"></span></p>
+                    <p>Preço total: <span th:text="${pedido.precoPedido}"></span></p>
+                </div>
+<!--                quando quero fazer algo deste tipo eh necessario informar qual o seu id-->
+                <div class="options">
+                    <a th:href="@{/editarPedido/{id}(id=${pedido.id})}" class="editBT">Editar</a>
+                    <a th:href="@{/deletarPedido/{id}(id=${pedido.id})}" class="deleteBT">Deletar</a>
+                </div>
+            </li>
+        </ul>
+    </section>
 </body>
 </html>

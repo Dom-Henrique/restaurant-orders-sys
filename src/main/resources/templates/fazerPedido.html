@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fazer Pedido</title>
+</head>
+<body>
+    <ul>
+        <li th:each="pedido : ${pedidos}">
+            <span th:text="${pedido.nomePedido}"></span>
+            <span th:text="${pedido.categoriaPedido}"></span>
+            <span th:text="${pedido.precoPedido}"></span>
+        </li>
+    </ul>
+</body>
+</html>
