@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Editar Pedido</title>
+    <link rel="stylesheet" th:href="@{/css/orders.css}">
 </head>
 <body>
     <h1>Editar Pedido</h1>
@@ -21,6 +22,7 @@
             <label for="">Preço: </label>
             <input type="number" name="precoPedido" id="" step="0.01" th:value="${pedido.precoPedido}">
         </div>
+        <a th:href="@{/cadastroPedido}">Voltar</a>
         <button type="submit">Salvar</button>
     </form>
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Pedidos</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/orders.css}">
 </head>
 <body>
     <h1>Cadastro de Pedidos</h1>
@@ -25,6 +25,7 @@
                 <input type="number" name="precoPedido" id="" step="0.01">
             </div>
         </div>
+        <a th:href="@{/}">Voltar</a>
         <button type="submit" class="cadastroBT">Cadastrar</button>
     </form>
     <section class="pedidosFeitos">
